@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="JS/change.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <!-- Brand -->
+        <img id ="logo" src="Images/logo.png"><h4 id="brand-name">Travel</h4>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Book</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Pacakges</a>
+            </li> -->
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Pacakges
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">USA</a>
+                  <a class="dropdown-item" href="#">India</a>
+                  <a class="dropdown-item" href="#">France</a>
+                  <a class="dropdown-item" href="#">Germany</a>
+
+                </div>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+          </ul>
+        </div>
+        <div class="btn">
+            <a href="#loginmodal " data-toggle="modal"><button class="btn btn-warning " id="login">Login</button></a>
+            <a href="#regmodal" data-toggle="modal"><button class="btn btn-warning " id="reg">Register</button></a>
+        </div>
+      </nav>
+      <div class="container-fluid" id="home">
+      <div class="row">
+        <div class="col-md-12">
+               <img id="img-change" src="Images/home.jpg" alt="" class="img-fluid">
+                <h2 class="top-left" height="180px" widht="200px">Welcome to Paradise.com </h2>
+                <h1 class="top-right">Visit <span id="changetext"></span></h1>
+                <button class="btn btn-secondary" id="book-btn">Book Now</button>
+        </div>
+      </div>
+      </div>
+      <br>
+
+      <div class="container" id="img-card">
+        <div class="text-center">
+          <h1>Book</h1>
+        </div>
+       
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card">
+              <!-- <h1>just testing</h1> -->
+              <img src="Images/india.jpg" >
+              <!-- <h2>India</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, quos.</p> -->
+              <!-- <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div> -->
+              <!-- <h5>Price:700$</h5>
+                <div>
+                  <button class="btn btn-warning">BookNow</button>
+                </div> -->
+              
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form>
+              <div class="form-group">
+                <label for="sel1">Select places (select one):</label>
+                <select class="form-control" id="sel1">
+                  <option>Manali</option>
+                  <option>Shimla</option>
+                  <option>Varanshi</option>
+                  <option>Mumbai</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="sel1">Select Persons :</label>
+                <select class="form-control" id="sel1">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  <option>7</option>
+                  <option>8</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="startDate">Start Date</label>
+                <input type="text" class="form-control datepicker" id="startDate" name="startDate" placeholder="Select start date" required>
+                <br>
+                <label for="endDate">End Date</label>
+        <input type="text" class="form-control datepicker" id="endDate" name="endDate" placeholder="Select end date" required>
+              </div>
+              <div class="form-group">
+                <label for="description">Description</label>
+      <textarea class="form-control" id="description" name="description" rows="4" placeholder="Enter description (50-500 characters)" minlength="50" maxlength="500" required></textarea>
+              </div>
+              <div  class="form-group">
+                <button type="submit" class="btn btn-success" id="bbtn">BookNow</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="package-section">
+      <div class="text-center"><h1>Packages</h1></div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/home.jpg" class="img-fluid">
+              <h3>India</h3>
+
+              <p>India is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :200$</h5>
+                <!-- <button class="btn btn-success">BookNow</button> -->
+                <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/germany.jpg" class="img-fluid">
+              <h3>Germany</h3>
+
+              <p>Germany is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :600$</h5>
+              <div  class="form-group">
+                <button type="submit" class="btn btn-success">BookNow</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/us.jpg" class="img-fluid">
+              <h3>USA</h3>
+
+              <p>USA is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :500$</h5>
+                <!-- <button class="btn btn-success">BookNow</button> -->
+                <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- <second row></second> -->
+        <div class="row" style="margin-top: 20px;">
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/japan.jpg" class="img-fluid">
+              <h3>Japan</h3>
+
+              <p>Japan is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :400$</h5>
+                <!-- <button class="btn btn-success">BookNow</button>
+                 -->
+                 <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/korea.jpg" class="img-fluid">
+              <h3>South Korea</h3>
+
+              <p>South korea is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :300$</h5>
+                <!-- <button class="btn btn-success">BookNow</button> -->
+                <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <img src="Images/uk.jpeg" class="img-fluid">
+              <h3>UK</h3>
+
+              <p>UK is a great place to visit.</p>
+               <div id="star">
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h5>Price :600$</h5>
+                <!-- <button class="btn btn-success">BookNow</button> -->
+                <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+            </div>
+          </div>
+    
+
+        </div>
+        <!-- <third row> -->
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-4">
+              <div class="card">
+                <img src="Images/uae.jpeg">
+                <h3>UAE</h3>
+  
+                <p>UAE is a great place to visit.</p>
+                 <div id="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h5>Price :200$</h5>
+                  <!-- <button class="btn btn-success">BookNow</button> -->
+                  <div  class="form-group">
+                    <button type="submit" class="btn btn-success">BookNow</button>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="Images/france.jpeg" class="img-fluid">
+                <h3>France</h3>
+  
+                <p>France is a great place to visit.</p>
+                 <div id="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h5>Price :700$</h5>
+                <div  class="form-group">
+                  <button type="submit" class="btn btn-success">BookNow</button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <img src="Images/italy.jpeg" class="img-fluid">
+                <h3>Italy</h3>
+  
+                <p>Italy is a great place to visit.</p>
+                 <div id="star">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <h5>Price :600$</h5>
+                  <!-- <button class="btn btn-success">BookNow</button> -->
+                  <div  class="form-group">
+                    <button type="submit" class="btn btn-success">BookNow</button>
+                  </div>
+              </div>
+            </div>
+            
+          </div>
+          
+          
+      </div>
+      <div class="container" id="services-section">
+        <div class="text-center text-center"><h1>Services</h1></div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Affordable Hotel</h3>
+              <p>Booking and reservation services for hotels, resorts, lodges, and vacation rental</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Food & Drinks</h3>
+              <p>Engage travelers in interactive and educational experiences related to food and beverages</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Safety Guides</h3>
+              <p>Be aware of your surroundings and trust your instincts</p>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Travel Insurance</h3>
+              <p>Offer travel insurance options to ensure travelers' safety and security during their trips.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Transportaion Assistance</h3>
+              <p>Arrangement of airport transfers, car rentals, and transportation between destinations</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card">
+              <h3>Wellness & Spa</h3>
+              <p>Wellness retreats and spa for relaxation and rejuvenation</p>
+            </div>
+          </div>
+          
+        </div>
+        </div>
+        <!-- gallery section -->
+    <section id="gallery">
+      <div><h1 class="section-heading text-center">Gallery</h1></div>
+      <div id="gallery-section" class="gallery-section container">
+      </div>
+    </section>
+     <!-- about section -->
+     <section id="about">
+      <div><h1 class="section-heading text-center">About</h1></div>
+      <div class="container">
+        <div class="about-section">
+          <div class="about-img">
+            <img src="https://img.freepik.com/free-vector/gradient-world-tourism-day-illustration_52683-129641.jpg?w=1060&t=st=1700992467~exp=1700993067~hmac=729e12f8c3ee2667acd3ba5ff83b8220e03eb8ab6c8d5b790772e32623ab5159" alt="about-image">
+          </div>
+          <div class="about-text">
+              <p>Welcome to <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span>, your gateway to unforgettable travel experiences and seamless hotel bookings. We understand that every journey is a story waiting to be told, and we are here to make yours extraordinary. Whether you're a seasoned traveler or embarking on your first adventure, <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span> is your trusted companion in crafting the perfect getaway.</p>
+  
+              <p>At <span style="font-weight: bold;"><span class="text-warning">T</span>ravel</span>, excellence is not just a goal; it's a standard. We continuously strive to exceed your expectations by staying ahead of industry trends, partnering with reputable establishments, and leveraging technology to enhance your booking experience.</p>
+  
+            <a id="aboutViewMoreBtn" class="btn btn-warning" href="./about.html">View more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- footer section -->
+      <div class="footer-section container-fluid">
+        <h1 class="text-dark fw-bold fs-1 text-center">
+          <span class="text-warning">T</span>ravel
+        </h1>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, voluptatem.</p>
+        <div class="social-icons">
+          <div class="social-icon"><i class="bi bi-instagram"></i></div>
+          <div class="social-icon"><i class="bi bi-facebook"></i></div>
+          <div class="social-icon"><i class="bi bi-whatsapp"></i></div>
+          <div class="social-icon"><i class="bi bi-twitter"></i></div>
+        </div>
+        <p class="copyright-text">Copyright &copy; 2023 Travel - All rights reserved.</p>
+      </div>
+
+<!-- Login modal -->
+<div class="modal fade " id="loginmodal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Login</h4>
+        </div>
+        <div class="modal-body">
+            <form>
+              <div class="form-group">
+                Email - <input type="email" class="form-control">
+              </div>
+              <div class="form-group">
+                Password - <input type="password" class="form-control">
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success"> Login </button>
+              </div>
+            </form>
+            <p> Don't have an Account? <a href="#regmodal" data-toggle="modal" data-dismiss="modal">SignUp</a></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-danger btn-sm"  data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- end Login modal -->
+<!-- Register modal -->
+<div class="modal fade " id="regmodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4>Login</h4>
+      </div>
+      <div class="modal-body">
+          <form>
+            <div class="form-group">
+              FullName - <input type="text" class="form-control" id="fullname">
+              <p id="ftext"></p>
+            </div>
+            <div class="form-group">
+              Email - <input type="email" class="form-control" id="email1" >
+              <p id="etext"></p>
+            </div>
+            <div class="form-group">
+              Password - <input type="password" class="form-control" id="password1">
+             <p id="ptext"></p>
+              <!-- <span id="passwordError" class="error"></span> -->
+            </div>
+            <div class="form-group">
+              Contact - <input type="tel" class="form-control" id="contact">
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success" id="registerButton"> Register </button>
+            </div>
+          </form>
+          <p> Already have an account <a href="#loginmodal" data-toggle="modal" data-dismiss="modal">SignIn</a></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger btn-sm"  data-dismiss="modal">Close</button>
+        <span id="formError" class="error"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end Register modal -->
+
+<script src="validation.js">
+</script>
+
+    <script src="main.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+      
+      <script>
+        // Initialize datepicker
+        $('.datepicker').datepicker({
+          format: 'yyyy-mm-dd',
+          autoclose: true
+        });
+        $('#startDate').on('changeDate', function (selected) {
+    var startDate = new Date(selected.date.valueOf());
+    $('#endDate').datepicker('setStartDate', startDate);
+  });
+
+  $('#endDate').on('changeDate', function (selected) {
+    var endDate = new Date(selected.date.valueOf());
+    $('#startDate').datepicker('setEndDate', endDate);
+  });
+  $('#bbtn').on('click',function(){
+    alert("Booking Successful");
+  })
+
+      </script>
+    
+      <!-- <script src="validation.js"></script> -->
+</body>
+</html>
