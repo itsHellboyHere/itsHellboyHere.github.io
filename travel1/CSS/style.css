@@ -86,12 +86,21 @@ img#logo{
     border-radius:20px;
     
 }
-#img-card .card ,#package-section .card{
+#img-card .card{
     border-radius: 20px;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: auto;
     /* padding-bottom: 10px; */
 
+}
+#package-section img{
+    height: 200px;
+    border-radius: 10px;
+}
+#package-section .card{
+  border-radius: 20px;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: auto;
 }
 #package-section {
     /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
@@ -104,26 +113,42 @@ img#logo{
     margin-left: 20px;
     font-family: 'Kanit', sans-serif;
 }
-#package-section img{
+/* #package-section img{
     border-radius: 10px;
-}
+} */
 #services-section .card{
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  margin: auto;
+    margin: auto;
+    padding: 20px;
+    width: 90%;
+    margin-bottom: 20px;
 }
 #services-section{
     margin-top: 30px;
+    
 }
 #services-section h3,p{
     margin-left: 20px;
     font-family: 'Kanit', sans-serif;
 }
+
+/* #services-section > .card :hover {
+  transform: scale(1.2);
+} */
 /* #package-section button{
     position:fixed;
 } */
+#services-section  .card  h3:hover{
+  color:darkblue;
+  transform: scale(1.2);
 
+}
+#services-section > .card > h3,p:hover{
+  color:chocolate;
+  transform: scale(1.1);
 
+}
 .gallery-section {
     margin-top: 30px;  
     display: flex;
